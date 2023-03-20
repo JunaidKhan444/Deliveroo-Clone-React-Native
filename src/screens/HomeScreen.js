@@ -1,14 +1,9 @@
-import { Image, Text, StyleSheet, StatusBar, View, TextInput } from "react-native";
+import { Image, Text, StyleSheet, StatusBar, View, TextInput, SafeAreaView, ScrollView } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import {
-    UserIcon,
-    ChevronDownIcon,
-    SearchIcon,
-    AdjustmentsIcon
-} from "react-native-heroicons/outline";
-
+// import { SafeAreaView } from "react-native-safe-area-context";
+import { UserIcon, ChevronDownIcon, MagnifyingGlassIcon, AdjustmentsVerticalIcon } from "react-native-heroicons/outline";
+import Categories from "../components/Categories";
 
 const HomeScreen = () => {
     const navigation = useNavigation();
@@ -21,8 +16,10 @@ const HomeScreen = () => {
     }, []);
 
     return (
+
         <SafeAreaView className="bg-white pt-5">
-            <Text className="text-red-600">
+            <StatusBar backgroundColor="black" barStyle="white-content" />
+            <View className="">
                 {/* Header */}
                 <View className="flex-row pb-3 items-center mx-4 space-x-2">
                     <Image source={{
@@ -39,25 +36,28 @@ const HomeScreen = () => {
                     <UserIcon size={35} color="#00CCBB" />
                 </View>
                 {/* Search */}
-                <View className="flex-row items-center space-x-2 pb-2 mx-4">
-                    <View className="flex-row space-x-2 flex-1 bg-gray-200 p-3">
-                        <SearchIcon color="gray" size={20} />
+                <View className="flex-row align-center space-x-2 pb-2 mx-4">
+                    <View className="flex-row flex-1 space-x-2 bg-gray-200 p-3 rounded-full">
+                        <MagnifyingGlassIcon color="gray" size={20} />
                         <TextInput
-                            placeholder="Restaurants and cusines"
+                            placeholder="Restaurants and Cusines"
                             keyboardType="default"
                         />
                     </View>
-                    <AdjustmentsIcon color="#00CCBB" />
+                    <AdjustmentsVerticalIcon color="#00CCBB" />
                 </View>
-            </Text>
+            </View>
+            <ScrollView className="bg-slate-100">
+                <Categories />
+            </ScrollView>
         </SafeAreaView>
-    )
+    );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        marginTop: StatusBar.currentHeight
-    }
-})
+// const styles = StyleSheet.create({
+//     container: {
+//         flex: 1,
+//         marginTop: StatusBar.currentHeight
+//     }
+// })
 export default HomeScreen;

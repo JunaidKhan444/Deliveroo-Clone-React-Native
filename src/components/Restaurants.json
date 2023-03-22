@@ -1,0 +1,179 @@
+[
+    {
+        "id": 1,
+        "featured": [
+            {
+                "id": 1,
+                "imgUrl": "https://links.papareact.com/gn7",
+                "title": "Subway!",
+                "rating": 4.5,
+                "genre": "Japanese",
+                "address": "Bemina",
+                "start_description": "Subway is american multi-national restaurant",
+                "dishes": [
+                    {
+                        "name": "",
+                        "short_description": "",
+                        "image": ""
+                    }
+                ],
+                "long": 20,
+                "lat": 0
+            },
+            {
+                "id": 1,
+                "imgUrl": "https://links.papareact.com/gn7",
+                "title": "Dubway!",
+                "rating": 4.5,
+                "genre": "Japanese",
+                "address": "Bemina",
+                "start_description": "Subway is american multi-national restaurant",
+                "dishes": [
+                    {
+                        "name": "",
+                        "short_description": "",
+                        "image": ""
+                    }
+                ],
+                "long": 20,
+                "lat": 0
+            },
+            {
+                "id": 1,
+                "imgUrl": "https://links.papareact.com/gn7",
+                "title": "Fubway!",
+                "rating": 4.5,
+                "genre": "Japanese",
+                "address": "Bemina",
+                "start_description": "Subway is american multi-national restaurant",
+                "dishes": [
+                    {
+                        "name": "",
+                        "short_description": "",
+                        "image": ""
+                    }
+                ],
+                "long": 20,
+                "lat": 0
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "featured": [
+            {
+                "id": 1,
+                "imgUrl": "https://links.papareact.com/gn7",
+                "title": "Subway!",
+                "rating": 4.5,
+                "genre": "Japanese",
+                "address": "Bemina",
+                "start_description": "Subway is american multi-national restaurant",
+                "dishes": [
+                    {
+                        "name": "",
+                        "short_description": "",
+                        "image": ""
+                    }
+                ],
+                "long": 20,
+                "lat": 0
+            },
+            {
+                "id": 1,
+                "imgUrl": "https://links.papareact.com/gn7",
+                "title": "Dubway!",
+                "rating": 4.5,
+                "genre": "Japanese",
+                "address": "Bemina",
+                "start_description": "Subway is american multi-national restaurant",
+                "dishes": [
+                    {
+                        "name": "",
+                        "short_description": "",
+                        "image": ""
+                    }
+                ],
+                "long": 20,
+                "lat": 0
+            },
+            {
+                "id": 1,
+                "imgUrl": "https://links.papareact.com/gn7",
+                "title": "Fubway!",
+                "rating": 4.5,
+                "genre": "Japanese",
+                "address": "Bemina",
+                "start_description": "Subway is american multi-national restaurant",
+                "dishes": [
+                    {
+                        "name": "",
+                        "short_description": "",
+                        "image": ""
+                    }
+                ],
+                "long": 20,
+                "lat": 0
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "featured": [
+            {
+                "id": 1,
+                "imgUrl": "https://links.papareact.com/gn7",
+                "title": "Subway!",
+                "rating": 4.5,
+                "genre": "Japanese",
+                "address": "Bemina",
+                "start_description": "Subway is american multi-national restaurant",
+                "dishes": [
+                    {
+                        "name": "",
+                        "short_description": "",
+                        "image": ""
+                    }
+                ],
+                "long": 20,
+                "lat": 0
+            },
+            {
+                "id": 1,
+                "imgUrl": "https://links.papareact.com/gn7",
+                "title": "Dubway!",
+                "rating": 4.5,
+                "genre": "Japanese",
+                "address": "Bemina",
+                "start_description": "Subway is american multi-national restaurant",
+                "dishes": [
+                    {
+                        "name": "",
+                        "short_description": "",
+                        "image": ""
+                    }
+                ],
+                "long": 20,
+                "lat": 0
+            },
+            {
+                "id": 1,
+                "imgUrl": "https://links.papareact.com/gn7",
+                "title": "Fubway!",
+                "rating": 4.5,
+                "genre": "Japanese",
+                "address": "Bemina",
+                "start_description": "Subway is american multi-national restaurant",
+                "dishes": [
+                    {
+                        "name": "",
+                        "short_description": "",
+                        "image": ""
+                    }
+                ],
+                "long": 20,
+                "lat": 0
+            }
+        ]
+    }
+]

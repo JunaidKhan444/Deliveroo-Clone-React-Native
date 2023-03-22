@@ -1,9 +1,19 @@
 import { View, Text, ScrollView } from "react-native";
 import React from "react"
 import { ArrowRightIcon } from "react-native-heroicons/outline";
-import ResturantCards from "./RestaurantCards";
+import RestaurantCards from "./RestaurantCards";
+import customData from "./Restaurants.json";
 
 const FeaturedRow = ({ id, title, description }) => {
+    const [restaurants, setRestaurants] = React.useState();
+
+    const d = customData.filter(obj => obj.id == id);
+
+    React.useEffect(() => {
+        p = d[0]['featured'];
+        setRestaurants(p);
+    }, []);
+
     return (
         <View>
             <View className="mt-4 flex-row items-center justify-between px-4">
@@ -20,42 +30,23 @@ const FeaturedRow = ({ id, title, description }) => {
                 showsHorizontalScrollIndicator={false}
             >
                 {/* Resturant Cards */}
-                <ResturantCards
-                    id={123}
-                    imgUrl="https://links.papareact.com/gn7"
-                    title="Yo! Shushi"
-                    rating={4.5}
-                    genre="Japanese"
-                    address="Bemina"
-                    start_discription="Test Description"
-                    dishes={[]}
-                    long={20}
-                    lat={0}
-                />
-                <ResturantCards
-                    id={123}
-                    imgUrl="https://links.papareact.com/gn7"
-                    title="Yo! Shushi"
-                    rating={4.5}
-                    genre="Japanese"
-                    address="Bemina"
-                    start_discription="Test Description"
-                    dishes={[]}
-                    long={20}
-                    lat={0}
-                />
-                <ResturantCards
-                    id={123}
-                    imgUrl="https://links.papareact.com/gn7"
-                    title="Yo! Shushi"
-                    rating={4.5}
-                    genre="Japanese"
-                    address="Bemina"
-                    start_discription="Test Description"
-                    dishes={[]}
-                    long={20}
-                    lat={0}
-                />
+                {restaurants?.map((obj, i) => (
+                    <RestaurantCards
+                        key={i}
+                        id={obj.id}
+                        imgUrl={obj.imgUrl}
+                        title={obj.title}
+                        rating={obj.rating}
+                        genre={obj.genre}
+                        address={obj.address}
+                        short_description={obj.short_description}
+                        dishes={obj.dishes}
+                        long={obj.long}
+                        lat={obj.lat}
+                    />
+                ))}
+
+
             </ScrollView>
         </View>
     )

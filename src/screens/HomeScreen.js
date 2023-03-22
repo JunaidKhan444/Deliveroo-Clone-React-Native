@@ -1,7 +1,7 @@
-import { Image, Text, StyleSheet, StatusBar, View, TextInput, SafeAreaView, ScrollView } from "react-native";
+import { Image, Text, StyleSheet, StatusBar, View, TextInput, ScrollView } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-// import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { UserIcon, ChevronDownIcon, MagnifyingGlassIcon, AdjustmentsVerticalIcon } from "react-native-heroicons/outline";
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
@@ -51,21 +51,22 @@ const HomeScreen = () => {
             <ScrollView className="bg-gray-100" contentContainerStyle={{ paddingBottom: 100, }}>
                 {/* Categories */}
                 <Categories />
+
                 {/* Featured Rows */}
                 <FeaturedRow
-                    id="123"
+                    id={1}
                     title="Featured"
                     description="Paid placements from our partners!"
                 />
                 {/* Tasty Discount */}
                 <FeaturedRow
-                    id="1234"
+                    id={2}
                     title="Tasty Discounts"
                     description="Everyone's been enjoying these juicy discounts!"
                 />
                 {/* Offers near you */}
                 <FeaturedRow
-                    id="12345"
+                    id={3}
                     title="Offers near you"
                     description="Why not support your local resturant tonight!"
                 />
@@ -77,7 +78,7 @@ const HomeScreen = () => {
 // const styles = StyleSheet.create({
 //     container: {
 //         flex: 1,
-//         marginTop: StatusBar.currentHeight
+//         paddingTop:Platform.OS == "android"? SatusBar.currentHeight:0,
 //     }
 // })
 export default HomeScreen;

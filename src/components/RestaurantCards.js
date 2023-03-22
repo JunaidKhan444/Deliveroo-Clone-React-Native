@@ -10,7 +10,7 @@ const ResturantCards = ({
     rating,
     genre,
     address,
-    start_discription,
+    short_description,
     dishes,
     long,
     lat,

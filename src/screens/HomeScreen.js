@@ -23,7 +23,7 @@ const HomeScreen = ({ navigation }) => {
             <View className="">
                 <Button
                     title="Setting"
-                    onPress={() => navigation.navigate("Setting")}
+                    onPress={() => navigation.navigate("Settings")}
                 />
                 {/* Header */}
                 <View className="flex-row pb-3 items-center mx-4 space-x-2">

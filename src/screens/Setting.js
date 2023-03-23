@@ -1,4 +1,5 @@
-import { View, Text, ScrollView, Switch, Button } from "react-native";
+import { View, Text, ScrollView, Switch, Image } from "react-native";
+import pic from "../../assets/userpic.jpg";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
 import {
@@ -6,7 +7,8 @@ import {
     UserCircleIcon,
     IdentificationIcon,
     EllipsisHorizontalIcon,
-    BellAlertIcon
+    BellAlertIcon,
+    ArrowRightOnRectangleIcon
 }
     from "react-native-heroicons/outline";
 
@@ -16,13 +18,20 @@ const Setting = ({ navigation }) => {
     return (
         <SafeAreaView className="bg-gray-100" >
             <ScrollView className="bg-gray-100" contentContainerStyle={{ paddingTop: 10, }}>
+                <View className="flex-column justify-center items-center">
+                    <Image
+                        source={pic}
+                        className=" w-50 h-50 rounded-full"
+                    />
+                    <Text>Username</Text>
+                </View>
                 <View className="flex-column">
                     <View className="pt-3">
                         <Text className="text-l text-[#B3C1D4] px-4">Account Settings</Text>
                         <View className="flex-column ">
                             <View className="mt-4 flex-row items-center justify-between px-4 bg-white pt-2 pb-2">
                                 <UserCircleIcon color="#053574" />
-                                <Text className="flex-1 text-[#073675] text-lg pl-2 divide-y-2">Profile</Text>
+                                <Text className="flex-1 text-[#073675] text-lg pl-2 divide-y-2">Edit Profile</Text>
                                 <ChevronRightIcon color="#053574" />
                             </View>
                             <View className="mt-0.5 flex-row items-center justify-between px-4 bg-white pt-2 pb-2">
@@ -64,13 +73,16 @@ const Setting = ({ navigation }) => {
                         </View>
                     </View>
                 </View>
-                <View className="pt-4">
-                    <Button
-                        // onPress={onPressLearnMore}
-                        title="Logout"
-                        color="#841584"
-                        accessibilityLabel="Click to Logout"
-                    />
+                <View className="flex-column">
+                    <View className="pt-3">
+                        <Text className="text-l text-[#B3C1D4] px-4">Login</Text>
+                        <View className="flex-column ">
+                            <View className="mt-4 flex-row items-center justify-between px-4 bg-white pt-2 pb-2">
+                                <ArrowRightOnRectangleIcon color="#053574" />
+                                <Text className="flex-1 text-[#073675] text-lg pl-2 divide-y-2">Log out</Text>
+                            </View>
+                        </View>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>

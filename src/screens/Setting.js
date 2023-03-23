@@ -15,20 +15,25 @@ import {
 const Setting = ({ navigation }) => {
     const [isEnabled, setIsEnabled] = React.useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+    React.useLayoutEffect(() => {
+        navigation.setOptions({
+            headerShown: false,
+            // headerTitle: "Settings",
+        });
+    }, []);
     return (
-        <SafeAreaView className="bg-gray-100" >
-            <ScrollView className="bg-gray-100" contentContainerStyle={{ paddingTop: 10, }}>
-                <View className="flex-column justify-center items-center">
-                    <Image
-                        source={pic}
-                        className=" w-50 h-50 rounded-full"
-                    />
-                    <Text>Username</Text>
-                </View>
-                <View className="flex-column">
+        <SafeAreaView className="bg-white pt-5">
+            <View className="flex-column justify-center items-center pt-3 pb-3 bg-white">
+                <Image
+                    source={pic}
+                    className=" w-50 h-50 rounded-full"
+                />
+                <Text className="text-xl">@Junii</Text>
+            </View>
+            <ScrollView className="bg-white" contentContainerStyle={{ paddingTop: 5, paddingBottom: 20, }}>
+                <View className="flex-column bg-white">
                     <View className="pt-3">
-                        <Text className="text-l text-[#B3C1D4] px-4">Account Settings</Text>
-                        <View className="flex-column ">
+                        <View className="flex-column divide-y-2 divide-[#E5EEFA]">
                             <View className="mt-4 flex-row items-center justify-between px-4 bg-white pt-2 pb-2">
                                 <UserCircleIcon color="#053574" />
                                 <Text className="flex-1 text-[#073675] text-lg pl-2 divide-y-2">Edit Profile</Text>
@@ -39,27 +44,12 @@ const Setting = ({ navigation }) => {
                                 <Text className="flex-1 text-[#073675] text-lg pl-2 divide-y-2">Account Information</Text>
                                 <ChevronRightIcon color="#053574" />
                             </View>
-                        </View>
-                    </View>
-                </View>
-                <View className="flex-column">
-                    <View className="pt-3">
-                        <Text className="text-l text-[#B3C1D4] px-4">Security Settings</Text>
-                        <View className="flex-column ">
-                            <View className="mt-4 flex-row items-center justify-between px-4 bg-white pt-2 pb-2">
+                            <View className="mt-0.5 flex-row items-center justify-between px-4 bg-white pt-2 pb-2">
                                 <EllipsisHorizontalIcon color="#053574" />
                                 <Text className="flex-1 text-[#073675] text-lg pl-2 divide-y-2">Password reset</Text>
                                 <ChevronRightIcon color="#053574" />
                             </View>
-
-                        </View>
-                    </View>
-                </View>
-                <View className="flex-column">
-                    <View className="pt-3">
-                        <Text className="text-l text-[#B3C1D4] px-4">App Settings</Text>
-                        <View className="flex-column ">
-                            <View className="mt-4 flex-row items-center justify-between px-4 bg-white pt-2 pb-2">
+                            <View className="mt-0.5 flex-row items-center justify-between px-4 bg-white pt-2 pb-2 h-11">
                                 <BellAlertIcon color="#053574" />
                                 <Text className="flex-1 text-[#073675] text-lg pl-2 divide-y-2">Notification</Text>
                                 <Switch
@@ -70,14 +60,7 @@ const Setting = ({ navigation }) => {
                                     value={isEnabled}
                                 />
                             </View>
-                        </View>
-                    </View>
-                </View>
-                <View className="flex-column">
-                    <View className="pt-3">
-                        <Text className="text-l text-[#B3C1D4] px-4">Login</Text>
-                        <View className="flex-column ">
-                            <View className="mt-4 flex-row items-center justify-between px-4 bg-white pt-2 pb-2">
+                            <View className="mt-0.5 flex-row items-center justify-between px-4 bg-white pt-2 pb-2">
                                 <ArrowRightOnRectangleIcon color="#053574" />
                                 <Text className="flex-1 text-[#073675] text-lg pl-2 divide-y-2">Log out</Text>
                             </View>
@@ -85,6 +68,7 @@ const Setting = ({ navigation }) => {
                     </View>
                 </View>
             </ScrollView>
+
         </SafeAreaView>
     )
 }

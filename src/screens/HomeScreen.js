@@ -1,4 +1,4 @@
-import { Image, Text, StyleSheet, StatusBar, View, TextInput, ScrollView } from "react-native";
+import { Image, Text, StyleSheet, StatusBar, View, TextInput, ScrollView, Button } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -6,8 +6,8 @@ import { UserIcon, ChevronDownIcon, MagnifyingGlassIcon, AdjustmentsVerticalIcon
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
 
-const HomeScreen = () => {
-    const navigation = useNavigation();
+const HomeScreen = ({ navigation }) => {
+    // const navigation = useNavigation();
 
     React.useLayoutEffect(() => {
         navigation.setOptions({
@@ -21,6 +21,10 @@ const HomeScreen = () => {
         <SafeAreaView className="bg-white pt-5">
             <StatusBar backgroundColor="black" barStyle="white-content" />
             <View className="">
+                <Button
+                    title="Setting"
+                    onPress={() => navigation.navigate("Setting")}
+                />
                 {/* Header */}
                 <View className="flex-row pb-3 items-center mx-4 space-x-2">
                     <Image source={{

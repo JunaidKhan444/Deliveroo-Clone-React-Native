@@ -34,7 +34,7 @@ const Setting = ({ navigation }) => {
             <View className="flex-column justify-center items-center pt-3 pb-10 bg-white">
                 <Image
                     source={pic}
-                    className=" w-50 h-50 rounded-full"
+                    className=" w-40 h-40 rounded-full"
                 />
                 <Text className="text-xl">@Junii</Text>
             </View>
@@ -84,7 +84,7 @@ const Setting = ({ navigation }) => {
                     </View>
                 </View>
             </ScrollView>
-            <View>
+            <View className="pt-32">
                 <Modal
                     animationType="slide"
                     transparent={true}

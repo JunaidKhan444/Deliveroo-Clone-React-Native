@@ -20,6 +20,9 @@ const Setting = ({ navigation }) => {
 
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
+    const changeModalVisible = (bool) => {
+        setModalVisible(bool);
+    }
     React.useLayoutEffect(() => {
         navigation.setOptions({
             // headerShown: false,
@@ -92,7 +95,7 @@ const Setting = ({ navigation }) => {
                     onRequestClose={() => {
                         setModalVisible(!modalVisible);
                     }}>
-                    <SimpleModal />
+                    <SimpleModal changeModalVisible={changeModalVisible} />
                 </Modal>
             </View>
         </SafeAreaView>

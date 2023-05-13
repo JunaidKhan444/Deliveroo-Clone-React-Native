@@ -1,5 +1,6 @@
-import { View, StyleSheet, Modal } from "react-native";
 import React from "react";
+
+import { View, StyleSheet, Modal } from "react-native";
 
 const ModalPopUp = ({ visible, children }) => {
     const [modalVisible, setModalVisible] = React.useState(visible);
@@ -18,7 +19,7 @@ const ModalPopUp = ({ visible, children }) => {
             </View>
         </Modal>
     );
-}
+};
 
 const styles = StyleSheet.create({
     modalBackGround: {
@@ -39,8 +40,9 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "40",
         alignItems: "flex-end",
-        justifyContent: "center"
+        justifyContent: "center",
     }
 });
 
 export default ModalPopUp;
+

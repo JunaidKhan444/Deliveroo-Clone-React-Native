@@ -1,5 +1,5 @@
-import { View, Text, ScrollView } from "react-native";
 import React from "react";
+import { View, Text, ScrollView } from "react-native";
 import CategoryCard from "./CategoryCard";
 import customData from "./MenuCategory.json";
 
@@ -28,7 +28,8 @@ const Categories = () => {
                 <CategoryCard imgUrl="https://links.papareact.com/gn7" title="Testing 3" /> */}
             </ScrollView>
         </View>
-    )
-}
+    );
+};
 
 export default Categories;
+

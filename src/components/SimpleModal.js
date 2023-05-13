@@ -1,6 +1,5 @@
-import { View, Text, TouchableOpacity, Dimensions } from "react-native";
 import React from "react";
-
+import { View, Text, TouchableOpacity, Dimensions } from "react-native";
 
 // const WIDTH = Dimensions.get("window").width;
 // const HEIGHT_MODAL = 100;
@@ -32,7 +31,8 @@ const SimpleModal = (props) => {
             </View>
         </TouchableOpacity >
 
-    )
-}
+    );
+};
 
 export default SimpleModal;
+

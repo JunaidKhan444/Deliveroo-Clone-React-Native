@@ -1,7 +1,7 @@
+import React from "react";
 import { View, Text, ScrollView, Switch, Image, TouchableOpacity, Modal, StyleSheet } from "react-native";
 import pic from "../../assets/userpic.jpg";
 import { SafeAreaView } from "react-native-safe-area-context";
-import React from "react";
 import {
     ChevronRightIcon,
     UserCircleIcon,
@@ -10,9 +10,8 @@ import {
     BellAlertIcon,
     ArrowRightOnRectangleIcon,
 }
-    from "react-native-heroicons/outline";
+from "react-native-heroicons/outline";
 import SimpleModal from "../components/SimpleModal";
-
 
 const Setting = ({ navigation }) => {
     const [isEnabled, setIsEnabled] = React.useState(false);
@@ -22,13 +21,14 @@ const Setting = ({ navigation }) => {
 
     const changeModalVisible = (bool) => {
         setModalVisible(bool);
-    }
+    };
+    
     React.useLayoutEffect(() => {
         navigation.setOptions({
             // headerShown: false,
             headerTitle: "Settings",
             headerTitleStyle: { color: "#073675" },
-            headerTitleAlign: 'center'
+            headerTitleAlign: "center"
         });
     }, []);
 
@@ -99,8 +99,8 @@ const Setting = ({ navigation }) => {
                 </Modal>
             </View>
         </SafeAreaView>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
     header: {
@@ -108,7 +108,8 @@ const styles = StyleSheet.create({
         height: "40",
         alignItems: "flex-end",
         justifyContent: "center"
-    }
+    },
 });
 
 export default Setting;
+

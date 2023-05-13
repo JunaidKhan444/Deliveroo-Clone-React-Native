@@ -1,5 +1,5 @@
+import React from "react";
 import { View, Text, ScrollView } from "react-native";
-import React from "react"
 import { ArrowRightIcon } from "react-native-heroicons/outline";
 import RestaurantCards from "./RestaurantCards";
 import customData from "./Restaurants.json";
@@ -49,7 +49,8 @@ const FeaturedRow = ({ id, title, description }) => {
 
             </ScrollView>
         </View>
-    )
-}
+    );
+};
 
 export default FeaturedRow;
+

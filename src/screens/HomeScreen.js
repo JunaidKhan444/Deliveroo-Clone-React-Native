@@ -1,5 +1,5 @@
-import { Image, Text, StyleSheet, StatusBar, View, TextInput, ScrollView, Button } from "react-native";
 import React from "react";
+import { Image, Text, StyleSheet, StatusBar, View, TextInput, ScrollView, Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { UserIcon, ChevronDownIcon, MagnifyingGlassIcon, AdjustmentsVerticalIcon } from "react-native-heroicons/outline";
@@ -86,3 +86,4 @@ const HomeScreen = ({ navigation }) => {
 //     }
 // })
 export default HomeScreen;
+

@@ -1,3 +1,10 @@
+/**
+ * Deliveroo-Clone
+ *
+ * @author   Junaid Khan
+ *
+ */
+ 
 import React from "react";
 import { View, Text, ScrollView, Switch, Image, TouchableOpacity, Modal, StyleSheet } from "react-native";
 import pic from "../../assets/userpic.jpg";

@@ -1,3 +1,10 @@
+/**
+ * Deliveroo-Clone
+ *
+ * @author   Junaid Khan
+ *
+ */
+ 
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { StarIcon } from "react-native-heroicons/solid";

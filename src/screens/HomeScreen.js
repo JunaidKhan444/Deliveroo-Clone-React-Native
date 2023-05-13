@@ -1,3 +1,10 @@
+/**
+ * Deliveroo-Clone
+ *
+ * @author   Junaid Khan
+ *
+ */
+ 
 import React from "react";
 import { Image, Text, StyleSheet, StatusBar, View, TextInput, ScrollView, Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";

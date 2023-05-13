@@ -1,5 +1,11 @@
+/**
+ * Deliveroo-Clone
+ *
+ * @author   Junaid Khan
+ *
+ */
+ 
 import React from "react";
-
 import { View, StyleSheet, Modal } from "react-native";
 
 const ModalPopUp = ({ visible, children }) => {

@@ -1,3 +1,10 @@
+/**
+ * Deliveroo-Clone
+ *
+ * @author   Junaid Khan
+ *
+ */
+ 
 import React from "react";
 import { View, Text, ScrollView } from "react-native";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
